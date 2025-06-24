@@ -30,7 +30,7 @@ def send_email_with_template(template_name, context, subject, recipient_list, fr
     # Ajouter des headers pour améliorer la compatibilité HTML
     email.extra_headers = {
         'Content-Type': 'text/html; charset=UTF-8',
-        'X-Mailer': 'SmartBudget Email System',
+        'X-Mailer': 'OptiBudget Email System',
     }
     
     email.send()
@@ -73,7 +73,7 @@ def send_password_reset_request_email(user, reset_url):
     send_email_task_with_template(
         template_name='emails/password_reset_request.html',
         context=context,
-        subject='Demande de réinitialisation de mot de passe - SMARTBUDGET',
+        subject='Demande de réinitialisation de mot de passe - OPTIBUDGET',
         recipient_list=[user.email]
     )
 
@@ -87,7 +87,7 @@ def send_password_reset_success_email(user):
     send_email_task_with_template(
         template_name='emails/password_reset_success.html',
         context=context,
-        subject='Mot de passe réinitialisé - SMARTBUDGET',
+        subject='Mot de passe réinitialisé - OPTIBUDGET',
         recipient_list=[user.email]
     )
 
@@ -106,6 +106,6 @@ def send_password_changed_email(user, device_info=None, ip_address=None):
     send_email_task_with_template(
         template_name='emails/password_changed.html',
         context=context,
-        subject='Mot de passe modifié - SMARTBUDGET',
+        subject='Mot de passe modifié - OPTIBUDGET',
         recipient_list=[user.email]
     ) 

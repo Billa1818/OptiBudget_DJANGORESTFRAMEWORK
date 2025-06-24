@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'smartbudget_admin',
+    'optibudget_admin',
     'accounts',
     'budgetManager',
     "rest_framework",
@@ -56,8 +56,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
-    'SmartBudget.middleware.CSRFExemptionMiddleware',
-    'SmartBudget.middleware.ClientKeyMiddleware',
+    'OptiBudget.middleware.CSRFExemptionMiddleware',
+    'OptiBudget.middleware.ClientKeyMiddleware',
     'accounts.middleware.DeviceDetectionMiddleware',
     'accounts.middleware.SecurityMiddleware',
     'accounts.middleware.ActivityTrackingMiddleware',
@@ -71,7 +71,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SmartBudget.urls'
+ROOT_URLCONF = 'OptiBudget.urls'
 
 TEMPLATES = [
     {
@@ -88,7 +88,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SmartBudget.wsgi.application'
+WSGI_APPLICATION = 'OptiBudget.wsgi.application'
 
 
 # Database
@@ -157,7 +157,7 @@ EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=False, cast=bool)
 EMAIL_USE_SSL = config('EMAIL_USE_SSL', default=False, cast=bool)
 EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
-DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='SmartBudget@site.com')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='OptiBudget@site.com')
 
 FRONTEND_URL = config('FRONTEND_URL', default='localhost:3000')
 

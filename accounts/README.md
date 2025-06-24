@@ -1,8 +1,8 @@
-# 📱 Application Accounts - SMARTBUDGET
+# 📱 Application Accounts - OPTIBUDGET
 
 ## 🎯 Vue d'ensemble
 
-L'application `accounts` gère l'authentification et la gestion des utilisateurs pour SMARTBUDGET. Elle utilise un système d'authentification JWT moderne avec gestion des appareils et sécurité renforcée.
+L'application `accounts` gère l'authentification et la gestion des utilisateurs pour OPTIBUDGET. Elle utilise un système d'authentification JWT moderne avec gestion des appareils et sécurité renforcée.
 
 ## 🔐 Fonctionnalités principales
 
@@ -300,7 +300,7 @@ EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER=your-email
 EMAIL_HOST_PASSWORD=your-password
-DEFAULT_FROM_EMAIL=SMARTBUDGET@site.com
+DEFAULT_FROM_EMAIL=OPTIBUDGET@site.com
 ```
 
 ### Configuration Django (settings.py)

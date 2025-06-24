@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class SmartbudgetAdminConfig(AppConfig):
+class OptibudgetAdminConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'smartbudget_admin'
+    name = 'optibudget_admin'

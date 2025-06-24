@@ -1,6 +1,6 @@
-# Client de Test pour l'API Accounts SMARTBUDGET
+# Client de Test pour l'API Accounts OPTIBUDGET
 
-Ce dossier contient un client Python complet pour tester tous les endpoints de l'application `accounts` de SMARTBUDGET.
+Ce dossier contient un client Python complet pour tester tous les endpoints de l'application `accounts` d'OPTIBUDGET.
 
 ## 📁 Fichiers
 
@@ -94,17 +94,17 @@ headers['X-Client-Key'] = '{client_key}'
 headers = {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
-    'User-Agent': 'SMARTBUDGET-TestClient/1.0',
+    'User-Agent': 'OPTIBUDGET-TestClient/1.0',
 }
 ```
 
 ## 📝 Exemple d'Utilisation
 
 ```python
-from test_accounts_client import SMARTBUDGETAccountsClient
+from test_accounts_client import OPTIBUDGETAccountsClient
 
 # Création du client
-client = SMARTBUDGETAccountsClient(
+client = OPTIBUDGETAccountsClient(
     base_url="http://localhost:8000",
     client_key="votre_cle_client"
 )
@@ -154,7 +154,7 @@ Le client inclut des tests de sécurité :
 
 ## 📋 Notes Importantes
 
-- Le client simule un navigateur avec `User-Agent: SMARTBUDGET-TestClient/1.0`
+- Le client simule un navigateur avec `User-Agent: OPTIBUDGET-TestClient/1.0`
 - Les tokens JWT sont automatiquement gérés
 - Les erreurs sont affichées de manière claire et formatée
 - Le client peut être utilisé en mode interactif ou programmatique 

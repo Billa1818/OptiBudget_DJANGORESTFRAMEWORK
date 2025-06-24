@@ -17,7 +17,7 @@ from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from SmartBudget.swagger_config import JWT_SECURITY, common_responses
+from OptiBudget.swagger_config import JWT_SECURITY, common_responses
 from .models import Budget, CategorieDepense, Depense, Entree, PaiementEmploye
 from .serializers import BudgetSerializer, CategorieDepenseSerializer, DepenseSerializer, EntreeSerializer
 from django.db import transaction

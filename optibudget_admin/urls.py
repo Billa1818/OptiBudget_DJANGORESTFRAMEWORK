@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-app_name = 'smartbudget_admin'
+app_name = 'optibudget_admin'
 
 urlpatterns = [
     path('login/', views.login, name='login'),

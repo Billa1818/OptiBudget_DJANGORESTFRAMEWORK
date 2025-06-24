@@ -447,7 +447,6 @@ class OptibudgetAccountsClient:
         print("-" * 50)
         
         self.test_logout()
-        
     
     def run_security_test(self):
         """Exécute des tests de sécurité"""

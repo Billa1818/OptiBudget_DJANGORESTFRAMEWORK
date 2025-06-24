@@ -8,10 +8,10 @@ from drf_yasg import openapi
 # Configuration de la documentation Swagger
 schema_view = get_schema_view(
     openapi.Info(
-        title="SmartBudget API",
+        title="OptiBudget API",
         default_version='v1',
         description="""
-        # API SmartBudget - Gestion de Budget Intelligente
+        # API OptiBudget - Gestion de Budget Intelligente
         
         ## Description
         API REST pour la gestion de budget avec conseils IA intégrés. 
@@ -108,11 +108,11 @@ schema_view = get_schema_view(
         }
         ```
         """,
-        terms_of_service="https://www.smartbudget.com/terms/",
+        terms_of_service="https://www.optibudget.com/terms/",
         contact=openapi.Contact(
-            email="contact@smartbudget.com",
-            name="Support SmartBudget",
-            url="https://www.smartbudget.com/support"
+            email="contact@optibudget.com",
+            name="Support OptiBudget",
+            url="https://www.optibudget.com/support"
         ),
         license=openapi.License(
             name="MIT License",
@@ -128,7 +128,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('admin/', admin_site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('SmartAdmin/', include('smartbudget_admin.urls')),
+    path('OptiAdmin/', include('optibudget_admin.urls')),
     
     # Documentation API
     re_path(r'^swagger(?P<format>\.json|\.yaml)$', schema_view.without_ui(cache_timeout=0), name='schema-json'),

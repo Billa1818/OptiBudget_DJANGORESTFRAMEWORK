@@ -122,7 +122,7 @@ class BudgetReportGenerator:
         writer = csv.writer(response)
         
         # En-têtes
-        writer.writerow(['RAPPORT BUDGET - SmartBudget'])
+        writer.writerow(['RAPPORT BUDGET - OptiBudget'])
         writer.writerow(['Généré le:', datetime.now().strftime("%d/%m/%Y %H:%M")])
         writer.writerow(['Utilisateur:', self.user.email])
         writer.writerow([])
@@ -312,7 +312,7 @@ class EmployeReportGenerator:
         writer = csv.writer(response)
         
         # En-têtes
-        writer.writerow(['RAPPORT EMPLOYÉS - SmartBudget'])
+        writer.writerow(['RAPPORT EMPLOYÉS - OptiBudget'])
         writer.writerow(['Généré le:', datetime.now().strftime("%d/%m/%Y %H:%M")])
         writer.writerow(['Utilisateur:', self.user.email])
         writer.writerow([])

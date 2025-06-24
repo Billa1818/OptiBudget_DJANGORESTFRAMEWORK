@@ -21,7 +21,7 @@ from rest_framework.filters import SearchFilter, OrderingFilter
 from django_filters.rest_framework import DjangoFilterBackend
 from django.contrib.auth import authenticate
 from tasks.sendMail import send_email_task
-from SmartBudget.settings import DEFAULT_FROM_EMAIL
+from OptiBudget.settings import DEFAULT_FROM_EMAIL
 from django.contrib.auth.models import User
 from django.utils.crypto import get_random_string
 from django.core.mail import send_mail, EmailMessage
@@ -34,7 +34,7 @@ from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from drf_yasg.utils import swagger_auto_schema
 from drf_yasg import openapi
-from SmartBudget.swagger_config import JWT_SECURITY
+from OptiBudget.swagger_config import JWT_SECURITY
 from .utils import send_password_reset_request_email, send_password_reset_success_email, send_password_changed_email
 from django import forms
 from django.views.generic import TemplateView
@@ -105,7 +105,7 @@ class UserRegistrationView(generics.CreateAPIView):
     
     def send_verification_email(self, user):
         """Envoie un email de vérification"""
-        subject = 'Vérifiez votre adresse email - SmartBudget'
+        subject = 'Vérifiez votre adresse email - OptiBudget'
         html_message = render_to_string('emails/email_verification.html', {
             'user': user,
             'verification_url': f"{self.request.scheme}://{self.request.get_host()}/api/accounts/verify-email/{user.email_verification_token}/"
@@ -843,7 +843,7 @@ class PasswordResetAPIView(APIView):
         token = default_token_generator.make_token(user)
         uid = urlsafe_base64_encode(force_bytes(user.pk))
         reset_url = f"{request.scheme}://{request.get_host()}/reset-password/{uid}/{token}/"
-        subject = 'Réinitialisation de votre mot de passe - SmartBudget'
+        subject = 'Réinitialisation de votre mot de passe - OptiBudget'
         html_message = render_to_string('emails/password_reset_request.html', {'user': user, 'reset_url': reset_url})
         plain_message = strip_tags(html_message)
         try:

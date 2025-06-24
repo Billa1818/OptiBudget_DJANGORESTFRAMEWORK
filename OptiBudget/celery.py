@@ -3,9 +3,9 @@ import os
 from celery import Celery
 from celery.schedules import crontab
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'SmartBudget.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'OptiBudget.settings')
 
-app = Celery('SmartBudget')
+app = Celery('OptiBudget')
 
 # Configure le broker Redis
 app.config_from_object('django.conf:settings', namespace='CELERY')

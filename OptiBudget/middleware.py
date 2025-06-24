@@ -1,6 +1,6 @@
 from django.http import JsonResponse
 from django.urls import resolve
-from smartbudget_admin.models import ClientKey
+from optibudget_admin.models import ClientKey
 import re
 from django.conf import settings
 from django.utils.deprecation import MiddlewareMixin
@@ -35,14 +35,14 @@ class ClientKeyMiddleware:
         
         # URLs exemptées totalement (pas besoin de clé même hors navigateur)
         self.free_exempt_urls = [
-            'smartbudget_admin:login',
-            'smartbudget_admin:profil',
-            'smartbudget_admin:reset_password',
-            'smartbudget_admin:search_account',
-            'smartbudget_admin:change_password',
-            'smartbudget_admin:signup',
-            'smartbudget_admin:dashboardadmin',
-            'smartbudget_admin:parametre',
+            'optibudget_admin:login',
+            'optibudget_admin:profil',
+            'optibudget_admin:reset_password',
+            'optibudget_admin:search_account',
+            'optibudget_admin:change_password',
+            'optibudget_admin:signup',
+            'optibudget_admin:dashboardadmin',
+            'optibudget_admin:parametre',
             'accounts:password_reset_api',
         ]
 
