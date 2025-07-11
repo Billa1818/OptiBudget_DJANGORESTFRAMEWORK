@@ -1,0 +1,11 @@
+# Fichiers de configuration sensibles
+.env
+.env.*
+env_var.txt
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
